@@ -1,30 +1,20 @@
 package main
 
 import (
-	"github.com/graphql-go/graphql"
 	"github.com/graphql-go/handler"
-	"log"
 	"net/http"
 	"html/template"
+	"fmt"
+	"go-grapgql-practice/schemas"
 )
 
 func main() {
 	// Schema
-	fields := graphql.Fields{
-		"hello": &graphql.Field{
-			Type: graphql.String,
-			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
-				return "world", nil
-			},
-		},
-	}
-	rootQuery := graphql.ObjectConfig{Name: "RootQuery", Fields: fields}
-	schemaConfig := graphql.SchemaConfig{Query: graphql.NewObject(rootQuery)}
-	schema, err := graphql.NewSchema(schemaConfig)
+	schema, err := schemas.GetSchema()
 	if err != nil {
-		log.Fatalf("failed to create new schema, error: %v", err)
+		panic(err)
 	}
-	// define GraphQL schema using relay library helpers
+	// define GraphQL schemas using relay library helpers
 	h := handler.New(&handler.Config{
 		Schema: &schema,
 		Pretty: true,
@@ -34,6 +24,7 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 	http.Handle("/graphql", h)
 	http.HandleFunc("/", serveTemplate)
+	fmt.Println("Server running on port :8080")
 	http.ListenAndServe(":8080", nil)
 }
 
