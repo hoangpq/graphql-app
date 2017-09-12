@@ -1,0 +1,5 @@
+host: localhost
+user: odoo
+password: odoo
+dbname: odoo-10
+port: 5432

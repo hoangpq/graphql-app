@@ -6,9 +6,12 @@ import (
 	"html/template"
 	"fmt"
 	"go-grapgql-practice/schemas"
+	"go-grapgql-practice/configs"
 )
 
 func main() {
+	data, _ := configs.GetDatabaseConfig()
+	fmt.Println(data)
 	// Schema
 	schema, err := schemas.GetSchema()
 	if err != nil {
