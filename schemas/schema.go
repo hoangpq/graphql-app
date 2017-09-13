@@ -7,6 +7,11 @@ import (
 	"log"
 )
 
+var (
+	humanType *graphql.Object
+	droidType *graphql.Object
+)
+
 func GetProductList() []models.Product {
 	productsList := []models.Product{}
 	// query product
@@ -25,7 +30,104 @@ func GetProductList() []models.Product {
 	return productsList
 }
 
+func GenCharacter() []Character {
+	humans := []Character{
+		{Name: "Jedi", Starship: "TIE Advanced x1"},
+	}
+	droids := []Character{
+		{Name: "R2-D2", PrimaryFunction: "Astromech"},
+	}
+	return append(humans, droids...)
+}
+
+type Character struct {
+	Name            string `json:"name"`
+	Starship        string `json:"starship"`
+	PrimaryFunction string `json:"primaryFunction"`
+}
+
 func GetSchema() (graphql.Schema, error) {
+
+	characterInterface := graphql.NewInterface(graphql.InterfaceConfig{
+		Name:        "Character",
+		Description: "A Character in the Star Wars Trilogy",
+		Fields: graphql.Fields{
+			"name": &graphql.Field{
+				Type:        graphql.NewNonNull(graphql.String),
+				Description: "The name of the character",
+			},
+		},
+		ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
+			if character, ok := p.Value.(Character); ok {
+				if character.Starship != "" {
+					return humanType
+				}
+				return droidType
+			}
+			return nil
+		},
+	})
+
+	humanType = graphql.NewObject(graphql.ObjectConfig{
+		Name:        "Human",
+		Description: "A humanoid creature in the Star Wars universe",
+		Fields: graphql.Fields{
+			"name": &graphql.Field{
+				Type:        graphql.NewNonNull(graphql.String),
+				Description: "The name of the human",
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					if character, ok := p.Source.(Character); ok {
+						return character.Name, nil
+					}
+					return nil, nil
+				},
+			},
+			"starship": &graphql.Field{
+				Type:        graphql.NewNonNull(graphql.String),
+				Description: "The starship of the human",
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					if character, ok := p.Source.(Character); ok {
+						return character.Starship, nil
+					}
+					return nil, nil
+				},
+			},
+		},
+		Interfaces: []*graphql.Interface{
+			characterInterface,
+		},
+	})
+
+	droidType = graphql.NewObject(graphql.ObjectConfig{
+		Name:        "Droid",
+		Description: "A mechanical creature in the Star Wars universe",
+		Fields: graphql.Fields{
+			"name": &graphql.Field{
+				Type:        graphql.NewNonNull(graphql.String),
+				Description: "The name of the droid",
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					if character, ok := p.Source.(Character); ok {
+						return character.Name, nil
+					}
+					return nil, nil
+				},
+			},
+			"primaryFunction": &graphql.Field{
+				Type:        graphql.NewNonNull(graphql.String),
+				Description: "The function of the droid",
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					if character, ok := p.Source.(Character); ok {
+						return character.PrimaryFunction, nil
+					}
+					return nil, nil
+				},
+			},
+		},
+		Interfaces: []*graphql.Interface{
+			characterInterface,
+		},
+	})
+
 	productType := graphql.NewObject(graphql.ObjectConfig{
 		Name:        "Product",
 		Description: "The Product Type",
@@ -69,6 +171,18 @@ func GetSchema() (graphql.Schema, error) {
 			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
 				return GetProductList(), nil
 			},
+		},
+		"characters": &graphql.Field{
+			Type: graphql.NewList(characterInterface),
+			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+				return GenCharacter(), nil
+			},
+		},
+		"droid": &graphql.Field{
+			Type: droidType,
+		},
+		"human": &graphql.Field{
+			Type: humanType,
 		},
 	}
 	rootQuery := graphql.ObjectConfig{Name: "RootQuery", Fields: fields}
