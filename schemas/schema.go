@@ -165,6 +165,22 @@ func GetSchema() (graphql.Schema, error) {
 		},
 	})
 
+	unionType := graphql.NewUnion(graphql.UnionConfig{
+		Name: "Result",
+		Types: []*graphql.Object{
+			humanType,
+			droidType,
+		},
+		ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
+			if character, ok := p.Value.(Character); ok {
+				if character.Starship != "" {
+					return humanType
+				}
+			}
+			return droidType
+		},
+	})
+
 	fields := graphql.Fields{
 		"products": &graphql.Field{
 			Type: graphql.NewList(productType),
@@ -174,6 +190,12 @@ func GetSchema() (graphql.Schema, error) {
 		},
 		"characters": &graphql.Field{
 			Type: graphql.NewList(characterInterface),
+			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+				return GenCharacter(), nil
+			},
+		},
+		"unionTest": &graphql.Field{
+			Type: graphql.NewList(unionType),
 			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
 				return GenCharacter(), nil
 			},

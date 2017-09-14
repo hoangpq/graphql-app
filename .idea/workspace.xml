@@ -2,73 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec8a192e-bb26-46db-90c6-29cd6e6f1fec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/load-dependencies.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/product.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/orm/db.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/schemas/schema.go" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/concurrency.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/go-grapgql-practice.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Godeps/Godeps.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Godeps/Readme" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/definition.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/directives.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/executor.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/gqlerrors/error.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/gqlerrors/formatted.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/gqlerrors/located.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/gqlerrors/sortutil.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/gqlerrors/syntax.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/graphql.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/introspection.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/kitchen-sink.graphql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/ast/arguments.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/ast/definitions.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/ast/directives.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/ast/document.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/ast/location.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/ast/name.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/ast/node.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/ast/selections.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/ast/type_definitions.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/ast/types.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/ast/values.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/kinds/kinds.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/lexer/lexer.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/location/location.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/parser/parser.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/printer/printer.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/source/source.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/typeInfo/type_info.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/language/visitor/visitor.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/located.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/rules.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/rules_overlapping_fields_can_be_merged.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/scalars.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/schema-kitchen-sink.graphql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/schema.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/type_info.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/types.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/util.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/validator.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/graphql/values.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/handler/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/handler/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/handler/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/handler/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/github.com/graphql-go/handler/handler.go" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/dist/bundle.js" afterPath="$PROJECT_DIR$/client/dist/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/schemas/schema.go" afterPath="$PROJECT_DIR$/schemas/schema.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,119 +12,105 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="e#14#124#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="load-dependencies.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/load-dependencies.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/schemas/schema.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-              <folding>
-                <element signature="e#17#124#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/product.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../github.com/graphql-go/graphql/schema.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/orm/db.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-              <folding>
-                <element signature="e#13#62#0" expanded="true" />
-                <marker date="1505206868000" expanded="true" signature="255:313" ph="SELECT * FRO... product_template" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sql.go" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/Cellar/go/1.8.1/libexec/src/database/sql/sql.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44442">
-              <caret line="2481" column="44" lean-forward="false" selection-start-line="2481" selection-start-column="36" selection-end-line="2481" selection-end-column="44" />
-              <folding>
-                <element signature="e#581#709#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scalars.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../github.com/graphql-go/graphql/scalars.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4392">
-              <caret line="251" column="44" lean-forward="false" selection-start-line="251" selection-start-column="44" selection-end-line="251" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/main.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                  <folding>
+                    <marker date="1505269732000" expanded="true" signature="21:123" ph="..." />
+                    <marker date="1505269732000" expanded="true" signature="229:707" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="load-dependencies.sh" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/load-dependencies.sh">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="72">
+                  <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="schema.go" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/schemas/schema.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="210">
+                  <caret line="195" column="10" lean-forward="true" selection-start-line="195" selection-start-column="10" selection-end-line="195" selection-end-column="10" />
+                  <folding>
+                    <element signature="e#17#124#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="database.yaml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/configs/database.yaml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="db.go" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/orm/db.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="234">
+                  <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+                  <folding>
+                    <marker date="1505269732000" expanded="true" signature="20:61" ph="..." />
+                    <marker date="1505269732000" expanded="true" signature="437:495" ph="SELECT * FRO... product_template" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.go" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/configs/config.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="72">
+                  <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="definition.go" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../github.com/graphql-go/graphql/definition.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="257">
+                  <caret line="812" column="25" lean-forward="true" selection-start-line="812" selection-start-column="25" selection-end-line="812" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -199,6 +120,17 @@
       <find>Scan</find>
       <find>Scan(</find>
       <find>pg</find>
+      <find>Interface</find>
+      <find>Runtime Object type \&quot;Human\&quot; is not a possible type for</find>
+      <find>Runtime Object type \&quot;H is not a possible type for</find>
+      <find>Runtime Object type \&quot; is not a possible type for</find>
+      <find>Runtime Object type \ is not a possible type for</find>
+      <find>Runtime Object type is not a possible type for</find>
+      <find>Runtime Object type  is not a possible type for</find>
+      <find>Runtime Object type * is not a possible type for</find>
+      <find>Runtime Object type *. is not a possible type for</find>
+      <find>is not a possible type for</find>
+      <find>Union</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -224,6 +156,8 @@
         <option value="$PROJECT_DIR$/schema/schema.go" />
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/configs/database.yaml" />
+        <option value="$PROJECT_DIR$/schemas/schema.go" />
       </list>
     </option>
   </component>
@@ -241,10 +175,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="305" />
-    <option name="y" value="309" />
-    <option name="width" value="1404" />
-    <option name="height" value="753" />
+    <option name="x" value="1939" />
+    <option name="y" value="233" />
+    <option name="width" value="1818" />
+    <option name="height" value="823" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -277,63 +211,38 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="concurrency" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="go-grapgql-practice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="concurrency" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="go-grapgql-practice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="schemas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="concurrency" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="go-grapgql-practice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="concurrency" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="go-grapgql-practice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="concurrency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-grapgql-practice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="concurrency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-grapgql-practice" type="462c0819:PsiDirectoryNode" />
+              <item name="configs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="concurrency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-grapgql-practice" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="concurrency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-grapgql-practice" type="462c0819:PsiDirectoryNode" />
+              <item name="orm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="concurrency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-grapgql-practice" type="462c0819:PsiDirectoryNode" />
+              <item name="schemas" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -347,6 +256,7 @@
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="GO_FMT" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -367,12 +277,29 @@
     </option>
   </component>
   <component name="RunManager" selected="Go Application.go run main.go">
-    <configuration default="false" name="go run main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
-      <module name="go-grapgql-practice" />
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="cocurrency" />
       <working_directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/main.go" />
+      <go_parameters value="-i" />
       <kind value="FILE" />
-      <method />
+      <filePath value="$PROJECT_DIR$/" />
+      <package value="cocurrency" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="cocurrency" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="cocurrency" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -385,28 +312,10 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="cocurrency" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <filePath value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <package value="cocurrency" />
-      <method />
-    </configuration>
     <configuration default="true" type="GoRunFileConfiguration" factoryName="Go Single File">
       <module name="cocurrency" />
       <working_directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="cocurrency" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="DIRECTORY" />
-      <package value="cocurrency" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
@@ -425,15 +334,6 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -441,9 +341,12 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Go Application.go run main.go" />
-    </list>
+    <configuration name="go run main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="go-grapgql-practice" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+    </configuration>
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Go Application.go run main.go" />
@@ -454,17 +357,16 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="305" y="309" width="1404" height="753" extended-state="0" />
+    <frame x="1939" y="233" width="1818" height="823" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18335788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13656884" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29537955" sideWeight="0.50454545" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26626325" sideWeight="0.49545455" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32554945" sideWeight="0.49545455" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18059702" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27685326" sideWeight="0.4969697" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27629232" sideWeight="0.4969697" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -472,28 +374,53 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29537955" sideWeight="0.50454545" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32597402" sideWeight="0.49545455" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18059702" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27629232" sideWeight="0.4969697" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16280566" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(schema): create new schema and remove godep" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(schema): create new schema and remove godep" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../gopkg.in/gin-gonic/gin.v1/context.go" />
-    <entry file="file://$PROJECT_DIR$/../gopkg.in/gin-gonic/gin.v1/gin.go" />
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding>
-            <element signature="e#14#124#0" expanded="true" />
+            <marker date="1505269732000" expanded="true" signature="21:123" ph="..." />
+            <marker date="1505269732000" expanded="true" signature="229:707" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -530,7 +457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -543,7 +469,8 @@
         <state relative-caret-position="54">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#14#124#0" expanded="true" />
+            <marker date="1505269732000" expanded="true" signature="21:123" ph="..." />
+            <marker date="1505269732000" expanded="true" signature="229:707" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -554,19 +481,8 @@
         <state relative-caret-position="108">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
-            <element signature="e#14#124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/channels.go" />
-    <entry file="file://$PROJECT_DIR$/run.sh" />
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#14#124#0" expanded="true" />
+            <marker date="1505269732000" expanded="true" signature="21:123" ph="..." />
+            <marker date="1505269732000" expanded="true" signature="229:707" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -578,7 +494,8 @@
         <state relative-caret-position="108">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
-            <element signature="e#14#124#0" expanded="true" />
+            <marker date="1505269732000" expanded="true" signature="21:123" ph="..." />
+            <marker date="1505269732000" expanded="true" signature="229:707" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -590,7 +507,21 @@
         <state relative-caret-position="108">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
-            <element signature="e#14#124#0" expanded="true" />
+            <marker date="1505269732000" expanded="true" signature="21:123" ph="..." />
+            <marker date="1505269732000" expanded="true" signature="229:707" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/channels.go" />
+    <entry file="file://$PROJECT_DIR$/run.sh" />
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <marker date="1505269732000" expanded="true" signature="21:123" ph="..." />
+            <marker date="1505269732000" expanded="true" signature="229:707" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -601,7 +532,8 @@
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="e#14#124#0" expanded="true" />
+            <marker date="1505269732000" expanded="true" signature="21:123" ph="..." />
+            <marker date="1505269732000" expanded="true" signature="229:707" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -615,13 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="0" column="535" lean-forward="false" selection-start-line="0" selection-start-column="535" selection-end-line="0" selection-end-column="535" />
         </state>
       </provider>
     </entry>
@@ -652,15 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="49698">
           <caret line="2784" column="57" lean-forward="false" selection-start-line="2784" selection-start-column="57" selection-end-line="2784" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/graphql-go/graphql/definition.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21870">
-          <caret line="1222" column="9" lean-forward="false" selection-start-line="1222" selection-start-column="9" selection-end-line="1222" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4392">
           <caret line="251" column="44" lean-forward="false" selection-start-line="251" selection-start-column="44" selection-end-line="251" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -687,70 +602,101 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/load-dependencies.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/graphql-go/graphql/schema.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orm/db.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#13#62#0" expanded="true" />
-            <marker date="1505206868000" expanded="true" signature="255:313" ph="SELECT * FRO... product_template" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/product.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#14#124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/schemas/schema.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="e#17#124#0" expanded="true" />
+            <marker date="1505269732000" expanded="true" signature="21:123" ph="..." />
+            <marker date="1505269732000" expanded="true" signature="229:707" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/dist/bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="19" column="26778" lean-forward="false" selection-start-line="19" selection-start-column="26778" selection-end-line="19" selection-end-column="26778" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/graphql-go/graphql/schema.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="557" column="41" lean-forward="false" selection-start-line="557" selection-start-column="41" selection-end-line="557" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/database.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orm/db.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <marker date="1505269732000" expanded="true" signature="20:61" ph="..." />
+            <marker date="1505269732000" expanded="true" signature="437:495" ph="SELECT * FRO... product_template" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/graphql-go/graphql/definition.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="812" column="25" lean-forward="true" selection-start-line="812" selection-start-column="25" selection-end-line="812" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/schemas/schema.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="195" column="10" lean-forward="true" selection-start-line="195" selection-start-column="10" selection-end-line="195" selection-end-column="10" />
+          <folding>
+            <element signature="e#17#124#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
