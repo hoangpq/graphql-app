@@ -5,6 +5,7 @@ import (
 	"github.com/graphql-go/graphql"
 	"go-grapgql-practice/models"
 	"log"
+	"math/rand"
 )
 
 var (
@@ -38,6 +39,17 @@ func GenCharacter() []Character {
 		{Name: "R2-D2", PrimaryFunction: "Astromech"},
 	}
 	return append(humans, droids...)
+}
+
+// Subscription
+var letters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+
+func randSeq(n int) string {
+	b := make([]rune, n)
+	for i := range b {
+		b[i] = letters[rand.Intn(len(letters))]
+	}
+	return string(b)
 }
 
 type Character struct {
@@ -181,6 +193,44 @@ func GetSchema() (graphql.Schema, error) {
 		},
 	})
 
+	var commentType = graphql.NewObject(
+		graphql.ObjectConfig{
+			Name: "Comment",
+			Fields: graphql.Fields{
+				"commentTitle": &graphql.Field{
+					Type: graphql.String,
+					Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+						return randSeq(10), nil
+					},
+				},
+				"commentDescription": &graphql.Field{
+					Type: graphql.String,
+					Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+						return randSeq(10), nil
+					},
+				},
+			},
+		},
+	)
+
+	var subscriptionType = graphql.NewObject(
+		graphql.ObjectConfig{
+			Name: "Subscription",
+			Fields: graphql.Fields{
+				"newComments": &graphql.Field{
+					Type: commentType,
+					Args: graphql.FieldConfigArgument{
+						"postId": &graphql.ArgumentConfig{
+							Type: graphql.String,
+						},
+					},
+					Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+						return randSeq(10), nil
+					},
+				},
+			},
+		})
+
 	fields := graphql.Fields{
 		"products": &graphql.Field{
 			Type: graphql.NewList(productType),
@@ -207,8 +257,14 @@ func GetSchema() (graphql.Schema, error) {
 			Type: humanType,
 		},
 	}
-	rootQuery := graphql.ObjectConfig{Name: "RootQuery", Fields: fields}
-	schemaConfig := graphql.SchemaConfig{Query: graphql.NewObject(rootQuery)}
+	rootQuery := graphql.ObjectConfig{
+		Name:   "RootQuery",
+		Fields: fields,
+	}
+	schemaConfig := graphql.SchemaConfig{
+		Query:        graphql.NewObject(rootQuery),
+		Subscription: subscriptionType,
+	}
 	schema, err := graphql.NewSchema(schemaConfig)
 	if err != nil {
 		log.Fatalf("failed to create new schemas, error: %v", err)
