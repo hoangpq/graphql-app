@@ -225,7 +225,8 @@ func GetSchema() (graphql.Schema, error) {
 						},
 					},
 					Resolve: func(p graphql.ResolveParams) (interface{}, error) {
-						return randSeq(10), nil
+						// return randSeq(10), nil
+						return p.Info.RootValue, nil
 					},
 				},
 			},

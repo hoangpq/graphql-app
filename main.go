@@ -7,6 +7,8 @@ import (
 	"fmt"
 	"go-grapgql-practice/schemas"
 	"go-grapgql-practice/configs"
+	"encoding/json"
+	"time"
 )
 
 func main() {
@@ -26,9 +28,19 @@ func main() {
 	fs := http.FileServer(http.Dir("client/dist"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 	http.Handle("/graphql", h)
+	http.HandleFunc("/json", handleJSONRequest)
 	http.HandleFunc("/", serveTemplate)
 	fmt.Println("Server running on port :8080")
 	http.ListenAndServe(":8080", nil)
+}
+
+func handleJSONRequest(w http.ResponseWriter, r *http.Request) {
+	w.Header().Add("Content-Type", "application/json")
+	data := make(map[string]string)
+	data["text"] = "Hello, World"
+	jsonStr, _ := json.Marshal(data)
+	time.Sleep(5 * time.Second)
+	w.Write(jsonStr)
 }
 
 func serveTemplate(w http.ResponseWriter, r *http.Request) {
