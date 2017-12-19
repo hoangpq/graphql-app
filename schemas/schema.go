@@ -14,7 +14,7 @@ var (
 )
 
 func GetProductList() []models.Product {
-	productsList := []models.Product{}
+	var productsList []models.Product
 	// query product
 	rows := orm.GetProducts()
 	defer rows.Close()
