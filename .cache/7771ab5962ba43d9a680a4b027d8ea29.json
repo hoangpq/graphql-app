@@ -1,1 +1,0 @@
-{"dependencies":[],"generated":{"js":"\"use strict\";function e(e){return e.Window&&e instanceof e.Window?{x:e.pageXOffset||e.document.documentElement.scrollLeft,y:e.pageYOffset||e.document.documentElement.scrollTop}:{x:e.scrollLeft,y:e.scrollTop}}module.exports=e;"},"hash":"dd90c4ad0927f49db38d6941f3504ccf"}

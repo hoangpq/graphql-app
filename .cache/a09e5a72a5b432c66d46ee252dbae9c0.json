@@ -1,1 +1,0 @@
-{"dependencies":[],"generated":{"js":"\"use strict\";var t,n={injectEmptyComponentFactory:function(n){t=n}},e={create:function(n){return t(n)}};e.injection=n,module.exports=e;"},"hash":"9f723c678d9fa2c1454289f9645c0d26"}

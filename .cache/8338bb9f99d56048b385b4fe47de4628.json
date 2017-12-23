@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"./hyphenate","loc":{"line":12,"column":24}}],"generated":{"js":"\"use strict\";function e(e){return r(e).replace(t,\"-ms-\")}var r=require(\"./hyphenate\"),t=/^ms-/;module.exports=e;"},"hash":"d2492e9ddd54ccad14e95da8c08603d6"}

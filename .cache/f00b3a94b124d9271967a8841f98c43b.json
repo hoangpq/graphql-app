@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"./lib/ReactDOM","loc":{"line":3,"column":25}}],"generated":{"js":"'use strict';\n\nmodule.exports = require('./lib/ReactDOM');\n"},"hash":"8da0d6995f399cea2d0bb23a538bed40"}

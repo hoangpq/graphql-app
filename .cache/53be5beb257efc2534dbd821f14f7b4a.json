@@ -1,1 +1,0 @@
-{"dependencies":[],"generated":{"js":"\"use strict\";function t(t){var e=this.nativeEvent;if(e.getModifierState)return e.getModifierState(t);var i=r[t];return!!i&&!!e[i]}function e(e){return t}var r={Alt:\"altKey\",Control:\"ctrlKey\",Meta:\"metaKey\",Shift:\"shiftKey\"};module.exports=e;"},"hash":"ec1cbb5a665f012e707a74ef26dc8149"}

@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"whatwg-fetch","loc":{"line":5,"column":8}}],"generated":{"js":"require(\"whatwg-fetch\"),module.exports=self.fetch.bind(self);"},"hash":"bdbb836d046a1d0e89629eaaf23eb41f"}

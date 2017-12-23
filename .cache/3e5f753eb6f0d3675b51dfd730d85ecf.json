@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"fbjs/lib/warning","loc":{"line":12,"column":22}}],"generated":{"js":"\"use strict\";var n,t,e=require(\"fbjs/lib/warning\"),i={onBeginProcessingChildContext:function(){n=!0},onEndProcessingChildContext:function(){n=!1},onSetState:function(){t()}};module.exports=i;"},"hash":"e6ad8dca0b23232fcc562e840e199a88"}

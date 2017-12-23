@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"whatwg-fetch","loc":{"line":5,"column":8}}],"generated":{"js":"// the whatwg-fetch polyfill installs the fetch() function\n// on the global object (window or self)\n//\n// Return that as the export for use in Webpack, Browserify etc.\nrequire('whatwg-fetch');\nmodule.exports = self.fetch.bind(self);\n"},"hash":"c1276878a9cb57b293466b1b0a758604"}

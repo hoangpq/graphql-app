@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"./performance","loc":{"line":12,"column":26}}],"generated":{"js":"\"use strict\";var r,e=require(\"./performance\");r=e.now?function(){return e.now()}:function(){return Date.now()},module.exports=r;"},"hash":"8a1672add551deeb0b8f3a67a2c00f4b"}

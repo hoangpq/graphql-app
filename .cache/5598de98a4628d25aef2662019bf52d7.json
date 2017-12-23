@@ -1,1 +1,0 @@
-{"dependencies":[],"generated":{"js":"\"use strict\";function e(e){for(var t=0,f=e;f.offsetParent;)t+=f.offsetLeft,f=f.offsetParent;return t}function t(e){for(var t=0,f=e;f.offsetParent;)t+=f.offsetTop,f=f.offsetParent;return t}Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.getLeft=e,exports.getTop=t;"},"hash":"11eada388164f874a9e0c8ca0800f14e"}

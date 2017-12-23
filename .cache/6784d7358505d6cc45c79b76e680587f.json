@@ -1,1 +1,0 @@
-{"dependencies":[{"name":"./SyntheticMouseEvent","loc":{"line":11,"column":34}}],"generated":{"js":"\"use strict\";function e(e,r,n,s){return t.call(this,e,r,n,s)}var t=require(\"./SyntheticMouseEvent\"),r={dataTransfer:null};t.augmentClass(e,r),module.exports=e;"},"hash":"4bd5294b05f6a3f4ee12a4ae98772447"}
