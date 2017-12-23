@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"\"use strict\";var n=function(n){return\"undefined\"!=typeof MSApp&&MSApp.execUnsafeLocalFunction?function(e,t,c,o){MSApp.execUnsafeLocalFunction(function(){return n(e,t,c,o)})}:n};module.exports=n;"},"hash":"ab7d36c17b8e4abb97d5a3b975bdf715"}

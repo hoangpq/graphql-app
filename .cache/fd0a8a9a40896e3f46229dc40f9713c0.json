@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"\"use strict\";var t=[],n={onHostOperation:function(n){t.push(n)},clearHistory:function(){n._preventClearing||(t=[])},getHistory:function(){return t}};module.exports=n;"},"hash":"2456b64f9f1425188d601136e0a7b2be"}

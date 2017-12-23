@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./ReactElement","loc":{"line":11,"column":23}},{"name":"prop-types/factory","loc":{"line":14,"column":22}}],"generated":{"js":"\"use strict\";var e=require(\"./ReactElement\"),r=e.isValidElement,t=require(\"prop-types/factory\");module.exports=t(r);"},"hash":"4c60ba31d6559c6c63b19f6de060186b"}

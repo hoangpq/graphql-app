@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"\"use strict\";function e(e){return e.replace(r,function(e,r){return r.toUpperCase()})}var r=/-(.)/g;module.exports=e;"},"hash":"75f0db032727f4490df36cbb6b757a86"}

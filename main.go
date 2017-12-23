@@ -1,15 +1,14 @@
 package main
 
 import (
-	"github.com/graphql-go/handler"
-	"github.com/gorilla/websocket"
-	"net/http"
-	"html/template"
 	"fmt"
-	"go-grapgql-practice/schemas"
 	"go-grapgql-practice/configs"
-	"encoding/json"
-	"time"
+	"go-grapgql-practice/schemas"
+	"html/template"
+	"net/http"
+
+	"github.com/gorilla/websocket"
+	"github.com/graphql-go/handler"
 )
 
 var wsupgrader = websocket.Upgrader{
@@ -32,22 +31,13 @@ func main() {
 	})
 	// serve HTTP
 	fs := http.FileServer(http.Dir("dist"))
-	http.Handle("/static/", http.StripPrefix("/static/", fs))
-	http.Handle("/graphql", h)
-	http.HandleFunc("/json", handleJSONRequest)
-	http.HandleFunc("/", serveTemplate)
+	http.Handle("/dist/", http.StripPrefix("/dist/", fs))
+	http.Handle("/api/graphql", h)
+	http.HandleFunc("/", serveVueTemplate)
+	http.HandleFunc("/graphql", serveTemplate)
 	http.HandleFunc("/ws", wshandler)
 	fmt.Println("Server running on port :8080")
 	http.ListenAndServe(":8080", nil)
-}
-
-func handleJSONRequest(w http.ResponseWriter, r *http.Request) {
-	w.Header().Add("Content-Type", "application/json")
-	data := make(map[string]string)
-	data["text"] = "Hello, World"
-	jsonStr, _ := json.Marshal(data)
-	time.Sleep(5 * time.Second)
-	w.Write(jsonStr)
 }
 
 func wshandler(w http.ResponseWriter, r *http.Request) {
@@ -66,6 +56,11 @@ func wshandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func serveTemplate(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("index.html")
+	t, _ := template.ParseFiles("dist/graphiql.html")
+	t.Execute(w, nil)
+}
+
+func serveVueTemplate(w http.ResponseWriter, r *http.Request) {
+	t, _ := template.ParseFiles("dist/index.html")
 	t.Execute(w, nil)
 }

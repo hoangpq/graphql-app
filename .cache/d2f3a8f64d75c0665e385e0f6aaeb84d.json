@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./isTextNode","loc":{"line":12,"column":25}}],"generated":{"js":"\"use strict\";function o(n,t){return!(!n||!t)&&(n===t||!e(n)&&(e(t)?o(n,t.parentNode):\"contains\"in n?n.contains(t):!!n.compareDocumentPosition&&!!(16&n.compareDocumentPosition(t))))}var e=require(\"./isTextNode\");module.exports=o;"},"hash":"0783697cce381febe818951d456a3b09"}

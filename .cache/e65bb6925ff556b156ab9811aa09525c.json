@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"\"use strict\";function t(t){var e=t&&(o&&t[o]||t[r]);if(\"function\"==typeof e)return e}var o=\"function\"==typeof Symbol&&Symbol.iterator,r=\"@@iterator\";module.exports=t;"},"hash":"eedbffd348507b4d385c69256cb64bfc"}

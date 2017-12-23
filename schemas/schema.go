@@ -140,6 +140,33 @@ func GetSchema() (graphql.Schema, error) {
 		},
 	})
 
+	productUom := graphql.NewObject(graphql.ObjectConfig{
+		Name:        "ProductUOM",
+		Description: "The Product UOM Type",
+		Fields: graphql.Fields{
+			"id": &graphql.Field{
+				Type:        graphql.ID,
+				Description: "The Product UOM id",
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					if uom, ok := p.Source.(models.ProductUOM); ok {
+						return uom.Id, nil
+					}
+					return nil, nil
+				},
+			},
+			"name": &graphql.Field{
+				Type:        graphql.String,
+				Description: "The product UOM name",
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					if uom, ok := p.Source.(models.ProductUOM); ok {
+						return uom.Name, nil
+					}
+					return nil, nil
+				},
+			},
+		},
+	})
+
 	productType := graphql.NewObject(graphql.ObjectConfig{
 		Name:        "Product",
 		Description: "The Product Type",
@@ -170,6 +197,16 @@ func GetSchema() (graphql.Schema, error) {
 				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
 					if product, ok := p.Source.(models.Product); ok {
 						return product.Price, nil
+					}
+					return nil, nil
+				},
+			},
+			"uom": &graphql.Field{
+				Type:        productUom,
+				Description: "The UOM of the product",
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					if product, ok := p.Source.(models.Product); ok {
+						return orm.GetUOMByProductID(product.Id), nil
 					}
 					return nil, nil
 				},

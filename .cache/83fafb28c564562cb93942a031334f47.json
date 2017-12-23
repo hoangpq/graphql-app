@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"\"use strict\";function e(e){var n=e.target||e.srcElement||window;return n.correspondingUseElement&&(n=n.correspondingUseElement),3===n.nodeType?n.parentNode:n}module.exports=e;"},"hash":"8b27f9ebf2f15b31d1ed6257b02d67fe"}

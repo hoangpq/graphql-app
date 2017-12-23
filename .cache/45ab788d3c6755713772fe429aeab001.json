@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"\"use strict\";function e(e){for(var t=[],n=0;n<e.length;n++)for(var o=e[n].definitions,r=0;r<o.length;r++)t.push(o[r]);return{kind:\"Document\",definitions:t}}Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.concatAST=e;"},"hash":"ed90ee9ad40b2cb5935d0b4778ccba6d"}

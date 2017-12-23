@@ -2,9 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  devtool: 'hidden-source-map',
+  // cheap-module-source-map
+  devtool: 'cheap-module-source-map',
   entry: [
-    './app/index'
+    './app/index',
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -16,7 +17,9 @@ module.exports = {
       {
         test: /\.js/,
         exclude: /(node_modules|bower_components)/,
-        include: path.join(__dirname, 'app'),
+        include: [
+          path.join(__dirname, 'app'),
+        ],
         use: [
           {
             loader: 'babel-loader',
@@ -44,6 +47,9 @@ module.exports = {
     }),
     new webpack.optimize.UglifyJsPlugin({
       // compress production
+      sourceMap: true,
+      parallel: true,
+      exclude: /node_modules/,
       compress: true,
     })
   ],

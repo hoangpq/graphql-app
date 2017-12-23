@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./ExecutionEnvironment","loc":{"line":12,"column":35}}],"generated":{"js":"\"use strict\";var e,r=require(\"./ExecutionEnvironment\");r.canUseDOM&&(e=window.performance||window.msPerformance||window.webkitPerformance),module.exports=e||{};"},"hash":"93fe3dd38745033baab24a4bdcb5f363"}

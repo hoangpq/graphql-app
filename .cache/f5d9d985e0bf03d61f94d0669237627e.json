@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./ReactNodeTypes","loc":{"line":11,"column":29}}],"generated":{"js":"\"use strict\";function e(e){for(var n;(n=e._renderedNodeType)===r.COMPOSITE;)e=e._renderedComponent;return n===r.HOST?e._renderedComponent:n===r.EMPTY?null:void 0}var r=require(\"./ReactNodeTypes\");module.exports=e;"},"hash":"7bd1c51302317648f83625fb5f8c35e4"}

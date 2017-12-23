@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./SyntheticUIEvent","loc":{"line":11,"column":31}}],"generated":{"js":"\"use strict\";function e(e,r,l,n){return t.call(this,e,r,l,n)}var t=require(\"./SyntheticUIEvent\"),r={relatedTarget:null};t.augmentClass(e,r),module.exports=e;"},"hash":"cd4b714dfa33f5e102155375944bb2fa"}

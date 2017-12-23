@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./ReactDOMComponentTree","loc":{"line":11,"column":36}},{"name":"fbjs/lib/focusNode","loc":{"line":13,"column":24}}],"generated":{"js":"\"use strict\";var e=require(\"./ReactDOMComponentTree\"),o=require(\"fbjs/lib/focusNode\"),t={focusDOMComponent:function(){o(e.getNodeFromInstance(this))}};module.exports=t;"},"hash":"0ac4d993b0c763782cc3e9b73454cb5e"}

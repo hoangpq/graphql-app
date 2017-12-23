@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./app\\graphiql.js","dynamic":true}],"generated":{"html":"<html>\r\n    <head>\r\n        <title>React</title>\r\n    </head>\r\n    <body>\r\n        <div id=\"app\"></div>\r\n        <script src=\"/3d6abd3a04e203be6494579c3e75bfd9.js\"></script>\r\n    </body>\r\n</html>"},"hash":"da3a58adfec6faaa586c767bb2155595"}

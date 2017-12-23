@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./isNode","loc":{"line":12,"column":21}}],"generated":{"js":"\"use strict\";function e(e){return r(e)&&3==e.nodeType}var r=require(\"./isNode\");module.exports=e;"},"hash":"eaf0c29e41e0496cb80455cf18b155d5"}
