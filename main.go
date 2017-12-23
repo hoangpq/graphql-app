@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"go-grapgql-practice/configs"
 	"go-grapgql-practice/schemas"
 	"html/template"
 	"net/http"
@@ -17,22 +16,20 @@ var wsupgrader = websocket.Upgrader{
 }
 
 func main() {
-	data, _ := configs.GetDatabaseConfig()
-	fmt.Println(data)
 	// Schema
 	schema, err := schemas.GetSchema()
 	if err != nil {
 		panic(err)
 	}
 	// define GraphQL schemas using relay library helpers
-	h := handler.New(&handler.Config{
+	graphqlHandler := handler.New(&handler.Config{
 		Schema: &schema,
 		Pretty: true,
 	})
 	// serve HTTP
 	fs := http.FileServer(http.Dir("dist"))
 	http.Handle("/dist/", http.StripPrefix("/dist/", fs))
-	http.Handle("/api/graphql", h)
+	http.Handle("/api/graphql", graphqlHandler)
 	http.HandleFunc("/", serveVueTemplate)
 	http.HandleFunc("/graphql", serveTemplate)
 	http.HandleFunc("/ws", wshandler)

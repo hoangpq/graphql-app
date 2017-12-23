@@ -1,48 +1,40 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {BrowserRouter, Link, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom';
-
+import Home from './components/Home';
 // import style
 require('./style.scss');
 
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-)
-
 const About = () => (
-  <div>
-    <h2>About</h2>
+  <div className="about-screen">
+    About
   </div>
-)
+);
 
 const App = () => (
-  <div className="wrapper">
+  <div className="container">
     <nav>
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
     </nav>
-    <div className="content">
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-    </div>
+    <Route exact path="/" component={Home}/>
+    <Route path="/about" component={About}/>
   </div>
-)
+);
 
 class Container extends Component {
 
   render() {
     return (
       <BrowserRouter>
-        <App />
+        <App/>
       </BrowserRouter>
     )
   }
 
 }
 
-ReactDOM.render(<Container />, document.querySelector('#app'));
+ReactDOM.render(<Container/>, document.querySelector('#app'));
 
 if (module.hot) {
   module.hot.accept();
