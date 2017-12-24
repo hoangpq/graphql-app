@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Product from './Product';
+import {gql} from '../utils';
 
 export default class ProductList extends Component {
 
@@ -11,17 +12,20 @@ export default class ProductList extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/graphql', {
-      method: 'POST',
-      /*headers: new Headers({
-        'Content-Type': 'application/json',
-      }),*/
-      body: JSON.stringify({
-        query: 'query getProducts { products { id name price uom { id name } } }'
-      })
-    })
-      .then(resp => resp.json())
-      .then(resp => this.setState({products: resp.data.products}))
+    gql(`
+      query getProducts {
+        products {
+          id
+          name
+          price
+          uom {
+            id
+            name 
+          }
+        }
+      }
+    `)
+      .then(resp => this.setState({products: resp.products}));
   }
 
   renderProductList() {

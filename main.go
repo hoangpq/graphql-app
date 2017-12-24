@@ -5,9 +5,11 @@ import (
 	"go-grapgql-practice/schemas"
 	"html/template"
 	"net/http"
-
 	"github.com/gorilla/websocket"
 	"github.com/graphql-go/handler"
+	"go-grapgql-practice/orm"
+	"go-grapgql-practice/models"
+	"time"
 )
 
 var wsupgrader = websocket.Upgrader{
@@ -15,7 +17,32 @@ var wsupgrader = websocket.Upgrader{
 	WriteBufferSize: 1024,
 }
 
+func GetUOM() {
+	start := time.Now()
+	ids := []int{1, 2, 3}
+	var uoms []models.ProductUOM
+	c := make(chan models.ProductUOM)
+	for _, id := range ids {
+		go func(id int) {
+			uom := orm.GetUomById(id)
+			if uom != nil {
+				c <- uom.(models.ProductUOM)
+			}
+		}(id)
+	}
+	for len(uoms) < len(ids) {
+		select {
+		case uom := <-c:
+			uoms = append(uoms, uom)
+		}
+	}
+	end := time.Since(start)
+	fmt.Printf("%s\n", end)
+	fmt.Println(uoms)
+}
+
 func main() {
+	GetUOM()
 	// Schema
 	schema, err := schemas.GetSchema()
 	if err != nil {

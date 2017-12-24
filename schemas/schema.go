@@ -13,24 +13,6 @@ var (
 	droidType *graphql.Object
 )
 
-func GetProductList() []models.Product {
-	var productsList []models.Product
-	// query product
-	rows := orm.GetProducts()
-	defer rows.Close()
-	for rows.Next() {
-		var id int
-		var name string
-		var price float32
-		err := rows.Scan(&id, &name, &price)
-		if err != nil {
-			panic(err)
-		}
-		productsList = append(productsList, models.Product{Id: id, Name: name, Price: price})
-	}
-	return productsList
-}
-
 func GenCharacter() []Character {
 	humans := []Character{
 		{Name: "Jedi", Starship: "TIE Advanced x1"},
@@ -206,7 +188,20 @@ func GetSchema() (graphql.Schema, error) {
 				Description: "The UOM of the product",
 				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
 					if product, ok := p.Source.(models.Product); ok {
-						return orm.GetUOMByProductID(product.Id), nil
+						c := make(chan models.ProductUOM)
+						go func() {
+							result := orm.GetUOMByProductID(product.Id)
+							if result != nil {
+								uom := result.(models.ProductUOM)
+								c <- uom
+							}
+						}()
+						for {
+							select {
+							case u := <-c:
+								return u, nil
+							}
+						}
 					}
 					return nil, nil
 				},
@@ -273,7 +268,21 @@ func GetSchema() (graphql.Schema, error) {
 		"products": &graphql.Field{
 			Type: graphql.NewList(productType),
 			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
-				return GetProductList(), nil
+				return orm.GetProducts(), nil
+			},
+		},
+		"product": &graphql.Field{
+			Type: productType,
+			Args: graphql.FieldConfigArgument{
+				"id": &graphql.ArgumentConfig{
+					Type: graphql.Int,
+				},
+			},
+			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+				if productId, ok := p.Args["id"]; ok {
+					return orm.GetProductById(productId.(int)), nil
+				}
+				return nil, nil
 			},
 		},
 		"characters": &graphql.Field{
