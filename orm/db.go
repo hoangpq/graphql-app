@@ -1,6 +1,7 @@
 package orm
 
 import (
+	"context"
 	"database/sql"
 	_ "github.com/lib/pq"
 	"go-grapgql-practice/configs"
@@ -89,11 +90,12 @@ func GetUOMByProductID(productId int) interface{} {
 		id   int
 		name string
 	)
+	db.ExecContext(context.Background(), "SELECT pg_sleep(5)")
 	err = db.QueryRow(`
-		SELECT pu.id AS id,  pu.name AS name
+		SELECT pu.id AS id, pu.name AS name
 		FROM product_template tmpl
 		LEFT JOIN product_uom pu ON tmpl.uom_id = pu.id
-		WHERE tmpl.id = $1`, productId).Scan(&id, &name)
+		WHERE tmpl.id = $1;`, productId).Scan(&id, &name)
 	if err == sql.ErrNoRows || err != nil {
 		return nil
 	}

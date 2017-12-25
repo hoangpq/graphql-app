@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"go-grapgql-practice/schemas"
 	"html/template"
 	"net/http"
+	"go-grapgql-practice/schemas"
 	"github.com/gorilla/websocket"
 	"github.com/graphql-go/handler"
 	"go-grapgql-practice/orm"

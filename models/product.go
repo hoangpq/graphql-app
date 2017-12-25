@@ -10,3 +10,8 @@ type ProductUOM struct {
 	Id   int    `json:"id"`
 	Name string `json:"name"`
 }
+
+type UOMMessage struct {
+	Uom       ProductUOM `json:"uom"`
+	ProductId int        `json:"product_id"`
+}
