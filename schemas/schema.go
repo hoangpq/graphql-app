@@ -62,6 +62,9 @@ func GetUOMByProductIDAsync(productId int, ch *amqp.Channel, q amqp.Queue) {
 
 func GetSchema() (graphql.Schema, error) {
 	conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
+	if err != nil {
+		fmt.Println(err)
+	}
 	ch, err := conn.Channel()
 	q, err := ch.QueueDeclare(
 		"hello", // name
@@ -237,16 +240,6 @@ func GetSchema() (graphql.Schema, error) {
 								return message.Uom, nil
 							}
 						}
-						//for {
-						//	select {
-						//	case msg := <-msgs:
-						//		json.Unmarshal(msg.Body, &message)
-						//		if message.ProductId == product.Id {
-						//			fmt.Println(message.Uom.Id)
-						//			return message.Uom, nil
-						//		}
-						//	}
-						//}
 					}
 					return nil, nil
 				},

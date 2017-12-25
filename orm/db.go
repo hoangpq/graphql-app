@@ -1,7 +1,6 @@
 package orm
 
 import (
-	"context"
 	"database/sql"
 	_ "github.com/lib/pq"
 	"go-grapgql-practice/configs"
@@ -90,7 +89,7 @@ func GetUOMByProductID(productId int) interface{} {
 		id   int
 		name string
 	)
-	db.ExecContext(context.Background(), "SELECT pg_sleep(5)")
+	// db.ExecContext(context.Background(), "SELECT pg_sleep(5)")
 	err = db.QueryRow(`
 		SELECT pu.id AS id, pu.name AS name
 		FROM product_template tmpl
