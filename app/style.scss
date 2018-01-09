@@ -4,7 +4,7 @@ $border-gray: 1px solid gray;
   max-width: 1366px;
   margin: 0 auto;
   nav {
-    a:nth-child(2) {
+    a:not(:nth-child(1)) {
       margin-left: 10px;
     }
   }

@@ -58,3 +58,13 @@ func GetUOMByProductID(productId int) interface{} {
 		Find(&uom)
 	return uom
 }
+
+func GetProductCount() (int) {
+	db := GetConnection()
+	defer db.Close()
+	var count int
+	db.Debug().
+		Model(&models.Product{}).
+		Count(&count)
+	return count
+}

@@ -6,6 +6,7 @@ import (
 	"log"
 	"math/rand"
 	"go-grapgql-practice/orm"
+	"fmt"
 )
 
 // use rabbitmq for queue
@@ -253,6 +254,20 @@ func GetSchema() (graphql.Schema, error) {
 		})
 
 	fields := graphql.Fields{
+		"count": &graphql.Field{
+			Type: graphql.Int,
+			Args: graphql.FieldConfigArgument{
+				"model": &graphql.ArgumentConfig{
+					Type: graphql.String,
+				},
+			},
+			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+				if model, ok := p.Args["model"]; ok {
+					fmt.Println(model)
+				}
+				return 10, nil
+			},
+		},
 		"products": &graphql.Field{
 			Type: graphql.NewList(productType),
 			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
