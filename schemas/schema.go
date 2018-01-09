@@ -1,14 +1,11 @@
 package schemas
 
 import (
-	"go-grapgql-practice/orm"
 	"github.com/graphql-go/graphql"
 	"go-grapgql-practice/models"
 	"log"
 	"math/rand"
-	"github.com/streadway/amqp"
-	"encoding/json"
-	"fmt"
+	"go-grapgql-practice/orm"
 )
 
 // use rabbitmq for queue
@@ -45,45 +42,7 @@ type Character struct {
 	PrimaryFunction string `json:"primaryFunction"`
 }
 
-func GetUOMByProductIDAsync(productId int, ch *amqp.Channel, q amqp.Queue) {
-	result := orm.GetUOMByProductID(productId)
-	packet := models.UOMMessage{Uom: result.(models.ProductUOM), ProductId: productId}
-	bytes, _ := json.Marshal(packet)
-	ch.Publish(
-		"",     // exchange
-		q.Name, // routing key
-		false,  // mandatory
-		false,  // immediate
-		amqp.Publishing{
-			ContentType: "text/plain",
-			Body:        bytes,
-		})
-}
-
 func GetSchema() (graphql.Schema, error) {
-	conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
-	if err != nil {
-		fmt.Println(err)
-	}
-	ch, err := conn.Channel()
-	q, err := ch.QueueDeclare(
-		"hello", // name
-		false,   // durable
-		false,   // delete when unused
-		false,   // exclusive
-		false,   // no-wait
-		nil,     // arguments
-	)
-	msgs, err := ch.Consume(
-		q.Name, // queue
-		"",     // consumer
-		true,   // auto-ack
-		false,  // exclusive
-		false,  // no-local
-		false,  // no-wait
-		nil,    // args
-	)
-
 	characterInterface := graphql.NewInterface(graphql.InterfaceConfig{
 		Name:        "Character",
 		Description: "A Character in the Star Wars Trilogy",
@@ -230,16 +189,7 @@ func GetSchema() (graphql.Schema, error) {
 				Description: "The UOM of the product",
 				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
 					if product, ok := p.Source.(models.Product); ok {
-						// return orm.GetProductById(product.Id), nil
-						var message models.UOMMessage
-						go GetUOMByProductIDAsync(product.Id, ch, q)
-						for msg := range msgs {
-							json.Unmarshal(msg.Body, &message)
-							if message.ProductId == product.Id {
-								fmt.Println(message.Uom.Id)
-								return message.Uom, nil
-							}
-						}
+						return orm.GetUOMByProductID(product.Id), nil
 					}
 					return nil, nil
 				},
