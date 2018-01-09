@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Link, Route} from 'react-router-dom';
+import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import Home from './components/Home';
 import ProductDetail from './components/ProductDetail';
+import Migration from './components/Migration';
+
 // import style
 require('./style.scss');
 
@@ -17,10 +19,14 @@ const App = () => (
     <nav>
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
+      <Link to="/migration">Migration</Link>
     </nav>
-    <Route exact path="/" component={Home}/>
-    <Route path="/about" component={About}/>
-    <Route path="/product/detail/:id" component={ProductDetail}/>
+    <Switch>
+      <Route exact path="/" component={Home}/>
+      <Route path="/about" component={About}/>
+      <Route path="/product/detail/:id" component={ProductDetail}/>
+      <Route path="/migration" component={Migration}/>
+    </Switch>
   </div>
 );
 

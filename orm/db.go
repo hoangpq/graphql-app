@@ -1,103 +1,60 @@
 package orm
 
 import (
-	"context"
-	"database/sql"
+	"fmt"
 	_ "github.com/lib/pq"
 	"go-grapgql-practice/configs"
-	"fmt"
 	"go-grapgql-practice/models"
+	"github.com/jinzhu/gorm"
 )
 
-func GetConnection() (*sql.DB, error) {
+func GetConnection() (*gorm.DB) {
 	config, _ := configs.GetDatabaseConfig()
 	connString := fmt.Sprintf(
 		"postgres://%s:%s@%s:%d/%s?sslmode=disable",
 		config.User, config.Password, config.Host, config.Port, config.Dbname,
 	)
-	return sql.Open("postgres", connString)
+	db, err := gorm.Open("postgres", connString)
+	db.LogMode(true)
+	if err != nil {
+		panic("Failed to connect database")
+	}
+	return db
 }
 
 func GetProducts() []models.Product {
-	db, err := GetConnection()
+	db := GetConnection()
 	defer db.Close()
-	if err != nil {
-		panic(err)
-	}
 	var products []models.Product
-	rows, err := db.Query("SELECT id, name, list_price AS price FROM product_template")
-	if err != nil {
-		panic(err)
-	}
-	defer rows.Close()
-	var (
-		id    int
-		name  string
-		price float32
-	)
-	for rows.Next() {
-		rows.Scan(&id, &name, &price)
-		products = append(products, models.Product{id, name, price})
-	}
+	db.Debug().Select([]string{"id", "name", "list_price"}).Find(&products)
 	return products
 }
 
 func GetUomById(uomId int) interface{} {
-	db, err := GetConnection()
+	db := GetConnection()
 	defer db.Close()
-	if err != nil {
-		panic(err)
-	}
-	var (
-		id   int
-		name string
-	)
-	err = db.QueryRow("SELECT id, name FROM product_uom WHERE id = $1", uomId).Scan(&id, &name)
-	if err == sql.ErrNoRows || err != nil {
-		return nil
-	}
-	return models.ProductUOM{id, name}
+	var uom models.ProductUOM
+	db.Debug().Where("id = ?", uomId).Select([]string{"id", "name"}).First(&uom)
+	return uom
 }
 
 func GetProductById(productId int) interface{} {
-	db, err := GetConnection()
+	db := GetConnection()
 	defer db.Close()
-	if err != nil {
-		panic(err)
-	}
-	var (
-		id    int
-		name  string
-		price float32
-	)
-	err = db.QueryRow(`
-		  SELECT id, name, list_price AS price
-		  FROM product_template
-		  WHERE id = $1`, productId).Scan(&id, &name, &price)
-	if err == sql.ErrNoRows || err != nil {
-		return nil
-	}
-	return models.Product{id, name, price}
+	var product models.Product
+	db.Debug().Where("id = ?", productId).Select([]string{"id", "name", "list_price"}).First(&product)
+	return product
 }
 
 func GetUOMByProductID(productId int) interface{} {
-	db, err := GetConnection()
-	if err != nil {
-		panic(err)
-	}
+	db := GetConnection()
 	defer db.Close()
-	var (
-		id   int
-		name string
-	)
-	db.ExecContext(context.Background(), "SELECT pg_sleep(5)")
-	err = db.QueryRow(`
-		SELECT pu.id AS id, pu.name AS name
-		FROM product_template tmpl
-		LEFT JOIN product_uom pu ON tmpl.uom_id = pu.id
-		WHERE tmpl.id = $1;`, productId).Scan(&id, &name)
-	if err == sql.ErrNoRows || err != nil {
-		return nil
-	}
-	return models.ProductUOM{id, name}
+	uom := models.ProductUOM{}
+	db.Debug().
+		Table("product_template tmpl").
+		Select("uom.id, uom.name").
+		Joins("left join product_uom uom on tmpl.uom_id = uom.id").
+		Where("tmpl.id = ?", productId).
+		Find(&uom)
+	return uom
 }

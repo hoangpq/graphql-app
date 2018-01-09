@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ProductList from "./ProductList";
-import SideBar from "./SideBar";
+import ProductList from './ProductList';
+import SideBar from './SideBar';
 
 export default class Home extends Component {
 
