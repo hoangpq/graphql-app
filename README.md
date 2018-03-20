@@ -1,0 +1,2 @@
+# graphql-app
+Go practice
